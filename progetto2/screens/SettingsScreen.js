@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Switch } from 'react-native';
+import styles from '../styles';
 
 export function SettingsScreen() {
   const [isEnabled, setIsEnabled] = React.useState(false);

@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeScreen } from './screens/HomeScreen';
-import { ProfileScreen } from './screens/profileScreen';
-import { SettingsScreen } from './screens/settingsScreen';
-import { ProductDetailsScreen } from './screens/ProductDetailsScreen';
-import { Ionicons } from '@expo/vector-icons';
+import  {NavigationContainer}  from '@react-navigation/native';
+import  {createNativeStackNavigator}  from '@react-navigation/native-stack';
+import  {createBottomTabNavigator}  from '@react-navigation/bottom-tabs';
+import  {Ionicons}  from '@expo/vector-icons';
+import  HomeScreen  from './screens/HomeScreen';
+import  ProfileScreen  from './screens/ProfileScreen';
+import  SettingsScreen  from './screens/SettingsScreen';
+import  ProductDetailsScreen  from './screens/ProductDetailsScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -39,14 +39,14 @@ function TabNavigator() {
   );
 }
 
- function App() {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen 
           name="MainTabs" 
           component={TabNavigator} 
-          options={{ headerShown: false }}
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="ProductDetails" 
@@ -57,69 +57,5 @@ function TabNavigator() {
     </NavigationContainer>
   );
 }
+
 export default App;
-
-
-
-
-
-// styles.js
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  productList: {
-    padding: 10,
-  },
-  productCard: {
-    padding: 15,
-    marginBottom: 10,
-    backgroundColor: '#f8f8f8',
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#ddd',
-  },
-  productName: {
-    fontSize: 18,
-    fontWeight: '500',
-  },
-  productPrice: {
-    fontSize: 16,
-    color: '#666',
-    marginTop: 5,
-  },
-  userInfo: {
-    padding: 15,
-    backgroundColor: '#f8f8f8',
-    borderRadius: 8,
-  },
-  userName: {
-    fontSize: 20,
-    fontWeight: '500',
-    marginBottom: 5,
-  },
-  userEmail: {
-    fontSize: 16,
-    color: '#666',
-  },
-  settingItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 15,
-    backgroundColor: '#f8f8f8',
-    borderRadius: 8,
-  },
-  description: {
-    fontSize: 16,
-    lineHeight: 24,
-    color: '#666',
-  },
-});
